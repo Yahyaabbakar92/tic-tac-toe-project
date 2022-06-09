@@ -35,6 +35,22 @@ body {
     font-size: 3rem;
 }
 
+.cell:nth-child(-n + 3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:nth-last-of-type(-n + 3) {
+    border-bottom: none;
+}
+
 .status {
     font-size: 3rem;
     color: steelblue;
