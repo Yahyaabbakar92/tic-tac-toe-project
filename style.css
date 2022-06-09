@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Kdam Thmor Pro', sans-serif;
-    background-color: snow;
+    background-color: #0e0d0d;
 }
 
 .container {
@@ -24,12 +24,12 @@ body {
     grid-template-columns: repeat(3, auto);
     width: 400px;
     margin: 10px auto;
-    color: darkslategrey;
+    color: #88cbcb;
 }
 
 .cell {
     height: 100px;
-    border: 2px solid black;
+    border: 2px solid snow;
     cursor: pointer;
     line-height: 100px;
     font-size: 3rem;
@@ -42,9 +42,9 @@ body {
 }
 
 .restart {
-    background-color: darkkhaki;
+    background-color: gold;
     font-size: 2rem;
-    color: darkslategrey;
+    color: #001b32;
     border: none;
     border-radius: 25px;
     padding: 5px 20px;
