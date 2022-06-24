@@ -1,29 +1,30 @@
 // The player factory
 const Player = function (marker) {
-  let getMarker = () => marker;
+  const getMarker = () => marker;
 
   return { getMarker };
 };
 
 const gameBoard = (function () {
-  let board = ["X", "O", "", "", "", "", "X", "", "o"];
+  let board = ["", "", "", "", "", "", "", "", ""];
 
-  function getBoardValues() {
-    // board.forEach((item) => console.log(item[0]));
-    // console.log(board[1]);
-    return board[8];
+  function getBoardValues(i) {
+    return board[i];
   }
   return { getBoardValues };
 })();
 
 // The UI functionality is on this module
 const displayController = (function () {
+  //putting the 'X' and 'O' on the screen and displaying messages. Also clearing the board on click
+
   let cells = document.querySelectorAll("[data-cell]");
+  let gameStatus = document.querySelector(".status");
 
   cells.forEach((cell) => {
     cell.addEventListener("click", (e) => {
-      e.target.textContent = gameBoard.getBoardValues();
-      // console.log(e.target.textContent);
+      e.target.textContent = game.currentPlayer.getMarker();
+      console.log(e);
     });
   });
 
@@ -32,5 +33,10 @@ const displayController = (function () {
 
 // The logic of the game is on this module
 const game = (function () {
-  return {};
+  const playerX = Player("X");
+  const playerO = Player("O");
+
+  let currentPlayer = playerX;
+
+  return { currentPlayer };
 })();
