@@ -1,8 +1,6 @@
 const Gameboard = (() => {
   let board = ["", "", "", "", "", "", "", "", ""];
-  return {
-    board,
-  };
+  return { board };
 })();
 
 const Player = (name, marker) => {
